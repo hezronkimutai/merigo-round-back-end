@@ -1,0 +1,12 @@
+require("@babel/register");
+const path = require('path');
+require('dotenv').config();
+require('@babel/preset-env');
+require("@babel/plugin-transform-runtime");
+
+module.exports = {
+  'config': path.resolve('src/v1/database', 'config.json'),
+  'models-path': path.resolve('src/v1/database', 'models'),
+  'seeders-path': path.resolve('src/v1/database', 'seeders'),
+  'migrations-path': path.resolve('src/v1/database', 'migrations')
+}
